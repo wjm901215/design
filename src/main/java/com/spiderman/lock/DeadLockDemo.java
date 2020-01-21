@@ -1,6 +1,8 @@
 package com.spiderman.lock;
 
+import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * 死锁示例
@@ -35,7 +37,7 @@ public class DeadLockDemo {
                 System.out.println("获取资源A数据");
                 try {
                     TimeUnit.SECONDS.sleep(sleep);
-                    System.out.println(String.format("休眠%d秒", sleep));
+                    System.out.println(String.format("threadA休眠%d秒", sleep));
                     synchronized (resource_b) {
                         System.out.println("获取资源B数据");
                     }
@@ -50,6 +52,12 @@ public class DeadLockDemo {
             System.out.println("线程：" + Thread.currentThread().getName());
             synchronized (resource_b) {
                 System.out.println("获取资源B数据");
+                try {
+                    TimeUnit.SECONDS.sleep(sleep);
+                    System.out.println(String.format("threadB休眠%d秒", sleep));
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 synchronized (resource_a) {
                     System.out.println("获取资源A数据");
                 }
