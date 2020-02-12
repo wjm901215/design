@@ -15,10 +15,11 @@ public class MyProxy {
     public static void main(String[] args) {
         Subject staticProxy = SubjectStaticFactory.getInstance();
         staticProxy.dealTask("DBQueryTask");
-
+        staticProxy.dealTask1();
 
         Subject dynameicProxy = DynProxyFactory.getInstance();
         dynameicProxy.dealTask("DBQueryTask");
+        dynameicProxy.dealTask1();
     }
 }
 

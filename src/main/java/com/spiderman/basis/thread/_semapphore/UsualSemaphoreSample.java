@@ -1,7 +1,6 @@
-package com.spiderman.thread._semapphore;
+package com.spiderman.basis.thread._semapphore;
 
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.TimeUnit;
 
 /**
  * 信号量典型场景

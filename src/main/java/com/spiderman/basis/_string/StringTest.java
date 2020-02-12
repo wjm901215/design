@@ -33,8 +33,8 @@ public class StringTest {
 //            System.out.println("tt!=cc");
 //        }
 
-        __intern();
 //        _intern();
+        __intern();
         ___intern();
 
     }
@@ -47,9 +47,9 @@ public class StringTest {
      * 4.判断两个对象地址，false
      */
     private static void __intern() {
-        String s4 = "12";
         String s3 = new String("12");
         s3.intern();
+        String s4 = "12";
 
         System.out.println(s3 == s4);
     }

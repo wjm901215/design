@@ -1,4 +1,4 @@
-package com.spiderman.thread._countdownlatch;
+package com.spiderman.basis.thread._countdownlatch;
 
 import java.util.concurrent.CountDownLatch;
 

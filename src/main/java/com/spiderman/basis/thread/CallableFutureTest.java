@@ -1,4 +1,4 @@
-package com.spiderman.thread;// Java program to illustrate Callable and FutureTask
+package com.spiderman.basis.thread;// Java program to illustrate Callable and FutureTask
 // for random number generation 
 
 import java.util.ArrayList;

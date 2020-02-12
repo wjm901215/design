@@ -1,4 +1,4 @@
-package com.spiderman.thread;
+package com.spiderman.basis.thread;
 
 /**
  * join 如果一个线程实例A执行了threadB.join(),其含义是：当前线程A会等待threadB线程终止后threadA才会继续执行

@@ -1,6 +1,7 @@
 package com.spiderman.basis.exception;
 
 import java.io.*;
+import java.util.concurrent.TimeoutException;
 
 /**
  * try-with-resource 使用
@@ -66,7 +67,7 @@ public class ExceptionTest {
 
 }
 
-class finallyTest{
+class FinallyTest{
     private String name;
     private int age;
 
@@ -79,11 +80,11 @@ class finallyTest{
     }
 
     public static void main(String[] args) {
-        System.out.println(new finallyTest().finallyTT().toString());
+        System.out.println(new FinallyTest().finallyTT().toString());
     }
 
-    private  finallyTest finallyTT() {
-        finallyTest finallyTest = new finallyTest();
+    private  FinallyTest finallyTT() {
+        FinallyTest finallyTest = new FinallyTest();
         try {
             finallyTest.name="张三";
             finallyTest.age=10;
@@ -94,5 +95,15 @@ class finallyTest{
             finallyTest.age=20;
         }
         return finallyTest;
+    }
+}
+
+class ExceptionTypeTest {
+    public void doSomething() throws NullPointerException {
+        System.out.println("11");
+    }
+    public static void main(String[] args){
+        ExceptionTypeTest ett = new ExceptionTypeTest();
+        ett.doSomething();
     }
 }

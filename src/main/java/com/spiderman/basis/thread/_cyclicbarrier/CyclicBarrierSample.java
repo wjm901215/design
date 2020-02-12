@@ -1,4 +1,4 @@
-package com.spiderman.thread._cyclicbarrier;
+package com.spiderman.basis.thread._cyclicbarrier;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;

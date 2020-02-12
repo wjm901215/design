@@ -1,4 +1,4 @@
-package com.spiderman.thread._semapphore;
+package com.spiderman.basis.thread._semapphore;
 
 import java.util.concurrent.Semaphore;
 public class AbnormalSemaphoreSample {
