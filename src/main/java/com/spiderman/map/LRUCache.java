@@ -1,5 +1,6 @@
 package com.spiderman.map;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -38,7 +39,7 @@ class LRUCache<K, V> extends LinkedHashMap<K, V> {
         objectObjectLRUCache.forEach((key,value)->{
             System.out.println(key + " = " + value);
         });
-
+        Map map=new HashMap<>();
 
     }
 }

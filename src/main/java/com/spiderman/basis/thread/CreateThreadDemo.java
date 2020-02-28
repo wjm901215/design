@@ -23,6 +23,7 @@ public class CreateThreadDemo {
         try {
             String result = future.get();
             System.out.println(result);
+            service.shutdown();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
