@@ -38,7 +38,7 @@ class CustomizeThreadFactory implements ThreadFactory {
                 Thread.currentThread().getThreadGroup();
         namePrefix = "sensor-pool-" +
                 poolNumber.getAndIncrement() +
-                "-thread-";
+                "-juc-";
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.spiderman.design.structure;
+package com.spiderman.design.structure.proxy;
 
 /**
  * 代理模式

@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
  * <p>notifyAll 针对于同一个对象，可以唤醒对应对象monitor上等待的所有线程</p>
  *
  * @author Spiderman
- * @version 1.0.0: com.spiderman.basis.thread.WaitNotifyDemo,v 0.1 2019-12-27 15:52 Exp $$
+ * @version 1.0.0: com.spiderman.basis.juc.WaitNotifyDemo,v 0.1 2019-12-27 15:52 Exp $$
  */
 public class WaitNotifyDemo {
     public synchronized void testWait(){

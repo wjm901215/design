@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
  * wait方法的作用就是阻塞当前线程等待notify/notifyAll方法的唤醒，或等待超时后自动唤醒</p>
  *
  * @author Spiderman
- * @version 1.0.0: com.spiderman.basis.thread.WaitDemo,v 0.1 2019-12-27 15:41 Exp $$
+ * @version 1.0.0: com.spiderman.basis.juc.WaitDemo,v 0.1 2019-12-27 15:41 Exp $$
  */
 public class WaitDemo {
 
