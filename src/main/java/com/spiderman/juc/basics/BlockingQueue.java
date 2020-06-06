@@ -6,7 +6,7 @@ import java.util.Queue;
 class BlockingQueue {
     Queue<String> buffer = new LinkedList<String>();
 
-    public void give(String data) {
+    public void put(String data) {
         buffer.add(data);
         synchronized (this) {
             System.out.println("give get lock");
@@ -15,13 +15,11 @@ class BlockingQueue {
     }
 
     public synchronized String take() throws InterruptedException {
-//        synchronized (this) {
-            while (buffer.isEmpty()) {
-                System.out.println("take wait Release lock");
-                //调用wait 释放锁
-                wait();
-            }
-//        }
+        while (buffer.isEmpty()) {
+            System.out.println("take wait Release lock");
+            //调用wait，阻塞并释放锁
+            wait();
+        }
         System.out.println("notify");
         buffer.forEach(tt -> {
             System.out.println("value:" + tt);
@@ -38,10 +36,12 @@ class BlockingQueue {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            blockingQueue.give("a");
+            blockingQueue.put("a");
         }).start();
 
         blockingQueue.take();
 
     }
 }
+
+
