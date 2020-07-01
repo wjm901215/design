@@ -33,9 +33,9 @@ public class StringTest {
 //            System.out.println("tt!=cc");
 //        }
 
-//        _intern();
-        __intern();
-        ___intern();
+        _intern();
+//        __intern();
+//        ___intern();
 
     }
 
